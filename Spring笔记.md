@@ -267,7 +267,7 @@ public class UserDaoImpl implements UserDao{
     * @Controller :web层
     * @Service    :service层
     * @Repository :dao层
-    ```java
+```java
 @Repository("UserDao") //相当于<bean id="UserDao" class="com.itheima.spring.demo.UserDaoImpl"></bean>
 public class UserDaoImpl implements UserDao{
 	@Override
@@ -277,7 +277,7 @@ public class UserDaoImpl implements UserDao{
 }
 ```
 
- * 属性注入的注解
+ *属性注入的注解
  * 普通属性:@value
  * 对象类型属性:@Autowired
     * xml配置
@@ -302,9 +302,9 @@ public class UserDaoImpl implements UserDao{
 	  public void save() {
 		userDao.save();
 		System.out.println("调用UserService的save方法");
- 	}
-}
-    ```
+ 	   }
+	}
+	```
     ```
     //控制台的输出
     调用UserDao的save方法
@@ -392,11 +392,11 @@ public class UserDaoImpl implements UserDao{
   <!-- 配置目标对象,被增强的对象 -->
 		<bean id="ProductDao" class="com.itcast.dao.ProductDaoImpl"></bean>
   ```
-  * spring整个junit单元测试
+  * spring整合junit单元测试
     * 导入spring-test-4.2.4.RELEASE.jar
     * 测试类SpringAOPTest.java
-    ```java
-    package com.itcast.test;
+```java
+package com.itcast.test;
 import javax.annotation.Resource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -417,7 +417,7 @@ public class SpringAOPTest {
 		productDao.delete();
 	}
 }
-    ```
+```
  * 编写切面类
  ```java
  public class MyAspect {
@@ -482,7 +482,7 @@ public class SpringAOPTest {
 	http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
   </beans>
-   ```
+
    * 实现类
    ```java
    public class OrderDaoImpl implements OrderDao {
@@ -556,7 +556,7 @@ public class SpringAOPTest {
   * @After:最终通知
   * 切入点注解
   ```java
-  @Around(value="MyAspectAnno.pointCut()")
+    @Around(value="MyAspectAnno.pointCut()")
 	public Object around(ProceedingJoinPoint joinpoint) throws Throwable {
 		System.out.println("环绕前增强");
 		Object obj=joinpoint.proceed();
