@@ -322,7 +322,7 @@ public class UserDaoImpl implements UserDao{
 		System.out.println("调用UserService的save方法");
 	}
 }
-    ```
+
  * 其他注解
     * @PostConstruct :相当于init-method
     * @PreDestory    :相当于destory-method
